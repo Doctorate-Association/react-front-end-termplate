@@ -67,3 +67,9 @@ pnpm run lint:fix
 ```bash
 pnpm test
 ```
+
+### build docker image
+
+```bash
+pnpm run build:docker
+```
