@@ -51,4 +51,5 @@ jobs:
       - name: Run test with Coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
+          package-manager: pnpm
           test-script: pnpm run test:coverage
