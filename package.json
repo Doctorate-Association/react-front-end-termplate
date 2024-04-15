@@ -1,8 +1,8 @@
 {
-  "name": "ant-design-pro",
+  "name": "react-front-end-template",
   "version": "6.0.0",
   "private": true,
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "react front end template",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
     "build": "max build",
@@ -48,6 +48,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.1",
     "@ant-design/pro-components": "^2.6.48",
+    "@testing-library/jest-dom": "^6.4.2",
     "@umijs/route-utils": "^2.2.2",
     "antd": "^5.13.2",
     "antd-style": "^3.6.1",
