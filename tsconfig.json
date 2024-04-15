@@ -18,7 +18,7 @@
       "@@/*": ["./src/.umi/*"],
       "@@test/*": ["./src/.umi-test/*"]
     },
-    "types": ["node", "jest", "@testing-library/jest-dom"]
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": ["./**/*.d.ts", "./**/*.ts", "./**/*.tsx"]
 }
