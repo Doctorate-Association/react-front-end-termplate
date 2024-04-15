@@ -51,7 +51,7 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@umijs/route-utils": "^2.2.2",
     "antd": "^5.13.2",
-    "antd-style": "^3.6.1",
+    "antd-style": "^3.6.2",
     "classnames": "^2.5.1",
     "omit.js": "^2.0.2",
     "querystring": "^0.2.1",
