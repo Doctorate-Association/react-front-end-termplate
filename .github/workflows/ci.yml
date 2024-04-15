@@ -48,8 +48,11 @@ jobs:
       - name: Lint code
         run: pnpm run lint
 
-      - name: Run test with Coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        with:
-          package-manager: pnpm
-          test-script: pnpm run test:coverage
+      - name: Run unit tests with Coverage report
+        run: pnpm run test:coverage
+
+#      - name: Run test with Coverage report
+#        uses: ArtiomTr/jest-coverage-report-action@v2
+#        with:
+#          package-manager: pnpm
+#          test-script: pnpm run test:coverage
