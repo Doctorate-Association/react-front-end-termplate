@@ -88,7 +88,7 @@
     "mockjs": "^1.1.0",
     "prettier": "^3.2.5",
     "react-dev-inspector": "^1.9.0",
-    "swagger-ui-dist": "^5.15.1",
+    "swagger-ui-dist": "^5.16.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "umi-presets-pro": "^2.0.3",
