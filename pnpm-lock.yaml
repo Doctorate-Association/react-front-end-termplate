@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   react-dev-inspector:
-    specifier: ^1.9.0
-    version: 1.9.0(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)(webpack@5.90.2)
+    specifier: ^2.0.1
+    version: 2.0.1(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)(webpack@5.90.2)
   swagger-ui-dist:
     specifier: ^5.17.2
     version: 5.17.2
@@ -3147,6 +3147,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  /@babel/types@7.20.5:
+    resolution: {integrity: sha512-c9fst/h2/dcF7H+MJKZ2T0KjEQ8hY/BNnDk/H3XY8C4Aw/eWQXWn/lWntHF9ooUBnGmEvbfGrTgLWc+um0YDUg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-string-parser': 7.23.4
+      '@babel/helper-validator-identifier': 7.22.20
+      to-fast-properties: 2.0.0
+    dev: true
+
   /@babel/types@7.23.9:
     resolution: {integrity: sha512-dQjSq/7HaSjRM43FFGnv5keM2HsxpmyV1PfaSVm0nzzjwwTmjOe6J4bC8e3+pTEIgHaHj+1ZlLThRJ2auc/w1Q==}
     engines: {node: '>=6.9.0'}
@@ -4870,6 +4879,73 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
+  /@react-dev-inspector/babel-plugin@2.0.1:
+    resolution: {integrity: sha512-V2MzN9dj3uZu6NvAjSxXwa3+FOciVIuwAUwPLpO6ji5xpUyx8E6UiEng1QqzttdpacKHFKtkNYjtQAE+Lsqa5A==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@babel/core': 7.23.9
+      '@babel/generator': 7.23.6
+      '@babel/parser': 7.23.9
+      '@babel/traverse': 7.23.9
+      '@babel/types': 7.20.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@react-dev-inspector/middleware@2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-qDMtBzAxNNAX01jjU1THZVuNiVB7J1Hjk42k8iLSSwfinc3hk667iqgdzeq1Za1a0V2bF5Ev6D4+nkZ+E1YUrQ==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      react-dev-utils: 12.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+      - vue-template-compiler
+      - webpack
+    dev: true
+
+  /@react-dev-inspector/umi3-plugin@2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-lRw65yKQdI/1BwrRXWJEHDJel4DWboOartGmR3S5xiTF+EiOLjmndxdA5LoVSdqbcggdtq5SWcsoZqI0TkhH7Q==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@react-dev-inspector/babel-plugin': 2.0.1
+      '@react-dev-inspector/middleware': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+      - vue-template-compiler
+      - webpack
+    dev: true
+
+  /@react-dev-inspector/umi4-plugin@2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-vTefsJVAZsgpuO9IZ1ZFIoyryVUU+hjV8OPD8DfDU+po5LjVXc5Uncn+MkFOsT24AMpNdDvCnTRYiuSkFn8EsA==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@react-dev-inspector/babel-plugin': 2.0.1
+      '@react-dev-inspector/middleware': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+      - vue-template-compiler
+      - webpack
+    dev: true
+
+  /@react-dev-inspector/vite-plugin@2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-J1eI7cIm2IXE6EwhHR1OyoefvobUJEn/vJWEBwOM5uW4JkkLwuVoV9vk++XJyAmKUNQ87gdWZvSWrI2LjfrSug==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@react-dev-inspector/middleware': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+      - vue-template-compiler
+      - webpack
+    dev: true
+
   /@remix-run/router@1.15.0:
     resolution: {integrity: sha512-HOil5aFtme37dVQTB6M34G95kPM3MMuqSmIRVCC52eKV+Y/tGSqw9P3rWhlAx6A+mz+MoX+XxsGsNJbaI5qCgQ==}
     engines: {node: '>=14.0.0'}
@@ -5503,6 +5579,12 @@ packages:
 
   /@types/react-helmet@6.1.11:
     resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
+    dependencies:
+      '@types/react': 18.2.55
+    dev: true
+
+  /@types/react-reconciler@0.28.8:
+    resolution: {integrity: sha512-SN9c4kxXZonFhbX4hJrZy37yw9e7EIxcpHCxQv5JUS18wDE5ovkQKlqQEkufdJCCMfuI9BnjUJvhYeJ9x5Ra7g==}
     dependencies:
       '@types/react': 18.2.55
     dev: true
@@ -16648,6 +16730,7 @@ packages:
     resolution: {integrity: sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==}
     engines: {node: '>=0.4.x'}
     deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: false
 
   /querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -17783,19 +17866,20 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dev-inspector@1.9.0(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)(webpack@5.90.2):
-    resolution: {integrity: sha512-1ZlraWRrDz+NgjHwOmTAn/wWoP+6gZt46DS1mRRILlST0iKg4FO2Zj9dDcG5XPaeIIr3OGKwsX5vM6vakmaftA==}
+  /react-dev-inspector@2.0.1(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-b8PAmbwGFrWcxeaX8wYveqO+VTwTXGJaz/yl9RO31LK1zeLKJVlkkbeLExLnJ6IvhXY1TwL8Q4+gR2GKJ8BI6Q==}
+    engines: {node: '>=12.0.0'}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
-      '@babel/core': 7.23.9
-      '@babel/generator': 7.23.6
-      '@babel/parser': 7.23.9
-      '@babel/traverse': 7.23.9
-      '@babel/types': 7.23.9
+      '@react-dev-inspector/babel-plugin': 2.0.1
+      '@react-dev-inspector/middleware': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+      '@react-dev-inspector/umi3-plugin': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+      '@react-dev-inspector/umi4-plugin': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+      '@react-dev-inspector/vite-plugin': 2.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
+      '@types/react-reconciler': 0.28.8
       hotkeys-js: 3.13.7
-      loader-utils: 2.0.4
-      querystring: 0.2.1
+      picocolors: 1.0.0
       react: 18.2.0
       react-dev-utils: 12.0.1(eslint@8.56.0)(typescript@5.3.3)(webpack@5.90.2)
     transitivePeerDependencies:
