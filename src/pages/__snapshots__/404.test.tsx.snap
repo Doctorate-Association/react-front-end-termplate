@@ -3,7 +3,7 @@
 exports[`NoFoundPage component renders without crashing 1`] = `
 <div>
   <div
-    class="ant-result ant-result-404 css-dev-only-do-not-override-1xg9z9n"
+    class="ant-result ant-result-404 css-dev-only-do-not-override-1okl62o"
   >
     <div
       class="ant-result-icon ant-result-image"
@@ -321,7 +321,7 @@ exports[`NoFoundPage component renders without crashing 1`] = `
       class="ant-result-extra"
     >
       <button
-        class="ant-btn css-dev-only-do-not-override-1xg9z9n ant-btn-primary"
+        class="ant-btn css-dev-only-do-not-override-1okl62o ant-btn-primary"
         type="button"
       >
         <span>
