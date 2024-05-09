@@ -18,6 +18,10 @@ export default [
     component: './Welcome',
   },
   {
+    path: '/callback',
+    component: './callback',
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },

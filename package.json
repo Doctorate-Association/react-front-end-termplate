@@ -52,6 +52,7 @@
     "@umijs/route-utils": "^4.0.1",
     "antd": "^5.17.0",
     "antd-style": "^3.6.2",
+    "casdoor-js-sdk": "^0.13.0",
     "classnames": "^2.5.1",
     "omit.js": "^2.0.2",
     "rc-menu": "^9.13.0",

@@ -65,4 +65,6 @@ export default {
   'pages.searchTable.tenThousand': '0000',
   'pages.searchTable.batchDeletion': 'batch deletion',
   'pages.searchTable.batchApproval': 'batch approval',
+  'pages.welcome.learn-more': 'Learn More',
+  'pages.welcome.welcome-title': 'Welcome to Doctorate Association',
 };

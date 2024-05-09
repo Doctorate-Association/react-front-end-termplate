@@ -63,4 +63,6 @@ export default {
   'pages.searchTable.tenThousand': '萬',
   'pages.searchTable.batchDeletion': '批量刪除',
   'pages.searchTable.batchApproval': '批量審批',
+  'pages.welcome.learn-more': '了解更多',
+  'pages.welcome.welcome-title': '歡迎來到博士聯盟',
 };
