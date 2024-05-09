@@ -1,15 +1,15 @@
-import { Footer, Question, SelectLang, AvatarDropdown, AvatarName } from '@/components';
+import { AvatarDropdown, AvatarName, Footer, SelectLang } from '@/components';
 import { LinkOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
-import type { RunTimeLayoutConfig } from '@umijs/max';
-import { history, Link } from '@umijs/max';
+import { Link, RequestConfig, RunTimeLayoutConfig } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
-import { errorConfig } from './requestErrorConfig';
-import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import React from 'react';
+import { FormattedMessage } from '@@/exports';
+import { getUserInfo, isLogin } from '@/utils/casdoor';
+import { requestConfig } from '@/requestConfig';
+
 const isDev = process.env.NODE_ENV === 'development';
-const loginPath = '/user/login';
 
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
@@ -22,18 +22,24 @@ export async function getInitialState(): Promise<{
 }> {
   const fetchUserInfo = async () => {
     try {
-      const msg = await queryCurrentUser({
-        skipErrorHandler: true,
-      });
-      return msg.data;
+      const ui: any = await getUserInfo();
+
+      const cu: API.CurrentUser = {
+        name: ui.name,
+        email: ui.email,
+        avatar: ui.picture,
+        userid: ui.sub,
+        access: 'admin',
+      };
+
+      return cu;
     } catch (error) {
-      history.push(loginPath);
+      console.error(' Failed to fetch user information, redirecting to home page', error);
     }
     return undefined;
   };
   // 如果不是登录页面，执行
-  const { location } = history;
-  if (location.pathname !== loginPath) {
+  if (isLogin()) {
     const currentUser = await fetchUserInfo();
     return {
       fetchUserInfo,
@@ -50,7 +56,7 @@ export async function getInitialState(): Promise<{
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
   return {
-    actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
+    actionsRender: () => [<SelectLang key="SelectLang" />],
     avatarProps: {
       src: initialState?.currentUser?.avatar,
       title: <AvatarName />,
@@ -60,10 +66,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     },
     footerRender: () => <Footer />,
     onPageChange: () => {
-      const { location } = history;
       // 如果没有登录，重定向到 login
-      if (!initialState?.currentUser && location.pathname !== loginPath) {
-        history.push(loginPath);
+      if (!initialState?.currentUser) {
+        console.warn('onPageChange: 未登录，重定向到登录页');
+        // window.location.href = Setting.CasdoorSDK.getSigninUrl()
       }
     },
     bgLayoutImgList: [
@@ -90,7 +96,9 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       ? [
           <Link key="openapi" to="/umi/plugin/openapi" target="_blank">
             <LinkOutlined />
-            <span>OpenAPI 文档</span>
+            <span>
+              <FormattedMessage id="app.link.openAPI" defaultMessage="Open API" />
+            </span>
           </Link>,
         ]
       : [],
@@ -128,6 +136,6 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
  * 它基于 axios 和 ahooks 的 useRequest 提供了一套统一的网络请求和错误处理方案。
  * @doc https://umijs.org/docs/max/request#配置
  */
-export const request = {
-  ...errorConfig,
+export const request: RequestConfig = {
+  ...requestConfig,
 };

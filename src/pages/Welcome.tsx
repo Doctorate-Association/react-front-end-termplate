@@ -2,6 +2,7 @@ import { PageContainer } from '@ant-design/pro-components';
 import { useModel } from '@umijs/max';
 import { Card, theme } from 'antd';
 import React from 'react';
+import { FormattedMessage, useIntl } from '@@/exports';
 
 /**
  * 每个单独的卡片，为了复用样式抽成了组件
@@ -15,6 +16,8 @@ const InfoCard: React.FC<{
   href: string;
 }> = ({ title, href, index, desc }) => {
   const { useToken } = theme;
+
+  const intl = useIntl();
 
   const { token } = useToken();
 
@@ -77,7 +80,7 @@ const InfoCard: React.FC<{
         {desc}
       </div>
       <a href={href} target="_blank" rel="noreferrer">
-        了解更多 {'>'}
+        {intl.formatMessage({ id: 'pages.welcome.learn-more' })} &gt;
       </a>
     </div>
   );
@@ -86,6 +89,7 @@ const InfoCard: React.FC<{
 const Welcome: React.FC = () => {
   const { token } = theme.useToken();
   const { initialState } = useModel('@@initialState');
+
   return (
     <PageContainer>
       <Card
@@ -114,7 +118,10 @@ const Welcome: React.FC = () => {
               color: token.colorTextHeading,
             }}
           >
-            欢迎使用博士联盟
+            <FormattedMessage
+              id="pages.welcome.welcome-title"
+              defaultMessage="Welcome to Doctorate Association"
+            />
           </div>
           <p
             style={{
