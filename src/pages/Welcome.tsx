@@ -1,6 +1,6 @@
 import { PageContainer } from '@ant-design/pro-components';
-import { request, useModel } from '@umijs/max';
-import { Button, Card, theme } from 'antd';
+import { useModel } from '@umijs/max';
+import { Card, theme } from 'antd';
 import React from 'react';
 import { FormattedMessage, useIntl } from '@@/exports';
 
@@ -90,17 +90,6 @@ const Welcome: React.FC = () => {
   const { token } = theme.useToken();
   const { initialState } = useModel('@@initialState');
 
-  const connectBackend = async () => {
-    request('/api/currentUser', {
-      method: 'GET',
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
   return (
     <PageContainer>
       <Card
@@ -177,14 +166,6 @@ const Welcome: React.FC = () => {
 "
             />
           </div>
-          <Button
-            type="primary"
-            onClick={() => {
-              connectBackend();
-            }}
-          >
-            Primary Button
-          </Button>
         </div>
       </Card>
     </PageContainer>
