@@ -63,7 +63,6 @@ export const requestConfig: RequestConfig = {
               });
               break;
             case ErrorShowType.REDIRECT:
-              // TODO: redirect
               break;
             default:
               message.error(errorMessage);

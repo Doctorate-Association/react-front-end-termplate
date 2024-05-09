@@ -30,10 +30,6 @@ export async function getUserInfo() {
   return await Setting.CasdoorSDK.getUserInfo(token);
 }
 
-// export function gotoProfilePage(account:Account) {
-//   window.location.assign(Setting.CasdoorSDK.getMyProfileUrl(account));
-// }
-
 export function logout() {
   localStorage.removeItem('accessToken');
 }
