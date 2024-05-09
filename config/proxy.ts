@@ -29,14 +29,14 @@ export default {
   test: {
     // localhost:8000/api/** -> https://preview.pro.ant.design/api/**
     '/api/': {
-      target: 'http://api.dev.com:8080/',
+      target: 'https://api.dev.com/',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
   },
   pre: {
     '/api/': {
-      target: 'http://api.dev.com:8080/',
+      target: 'https://api.dev.com/',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
