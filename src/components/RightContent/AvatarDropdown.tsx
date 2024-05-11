@@ -5,7 +5,7 @@ import type { MenuInfo } from 'rc-menu/lib/interface';
 import React, { useCallback, useMemo } from 'react';
 import { flushSync } from 'react-dom';
 import HeaderDropdown from '../HeaderDropdown';
-import { logout, redirectToSignin } from '@/utils/casdoor';
+import { logout, redirectToSignin, redirectToSignup } from '@/utils/casdoor';
 import { FormattedMessage, useIntl } from '@@/exports';
 
 export type GlobalHeaderRightProps = {
@@ -40,9 +40,14 @@ export const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu, childre
 
   const loginBtn = useMemo(
     () => (
-      <Button type="primary" onClick={redirectToSignin}>
-        <FormattedMessage id="component.button.login" />
-      </Button>
+      <>
+        <Button type="primary" onClick={redirectToSignin}>
+          <FormattedMessage id="component.button.login" />
+        </Button>
+        <Button type="link" onClick={redirectToSignup}>
+          <FormattedMessage id="component.button.register" />
+        </Button>
+      </>
     ),
     [],
   );
