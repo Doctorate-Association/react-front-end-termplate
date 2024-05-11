@@ -20,6 +20,10 @@ export async function redirectToSignin() {
   await Setting.CasdoorSDK.signin_redirect();
 }
 
+export async function redirectToSignup() {
+  window.location.href = Setting.CasdoorSDK.getSignupUrl();
+}
+
 export async function getUserInfo() {
   const token = getToken();
 
