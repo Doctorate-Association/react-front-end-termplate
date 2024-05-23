@@ -74,7 +74,7 @@
     "@types/react-helmet": "^6.1.11",
     "@umijs/fabric": "^4.0.1",
     "@umijs/lint": "^4.2.5",
-    "@umijs/max": "^4.1.10",
+    "@umijs/max": "^4.2.5",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.11",
     "eslint": "^8.57.0",
