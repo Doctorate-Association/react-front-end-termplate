@@ -19,6 +19,15 @@ pnpm install
 
 ### Start for development
 
+When you in development mode, normally Casdoor is default to run under http protocol. Please remember to change your `severUrl`config under `config/casdoor.ts`file to correct one
+
+```typescript
+const sdkConfig = {
+  serverUrl: 'https://sso.dev.com:8000',
+  ...
+};
+```
+
 Start with mock API server for development without backend
 
 ```bash
