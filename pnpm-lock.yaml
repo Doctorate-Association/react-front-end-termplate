@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1(eslint@8.57.0)(react@18.3.1)(typescript@5.4.5)(webpack@5.91.0)
   swagger-ui-dist:
-    specifier: ^5.17.2
-    version: 5.17.7
+    specifier: ^5.17.12
+    version: 5.17.12
   ts-node:
     specifier: ^10.9.2
     version: 10.9.2(@types/node@20.12.11)(typescript@5.4.5)
@@ -21336,8 +21336,8 @@ packages:
     resolution: {integrity: sha512-n/gFn+R7G/BXWwl5UZLw6F1YgWOlf3zkwGlsPhTMhNtAAolBGKg0JS5b2RKt5NI6/hSopVaSrki2wTIMUDDy2w==}
     dev: true
 
-  /swagger-ui-dist@5.17.7:
-    resolution: {integrity: sha512-hKnq2Dss6Nvqxzj+tToBz0IJvKXgp7FExxX0Zj0rMajXJp8CJ98yLAwbKwKu8rxQf+2iIDUTGir84SCA8AN+fQ==}
+  /swagger-ui-dist@5.17.12:
+    resolution: {integrity: sha512-gHzs6CYQjgm0rpnFJGsjvWLua6znq+nipi89RDcu0a8R8JPXuVQrybVRBoOFmZ8mVTo9uPJDWgEYqnJRl4dHCQ==}
     dev: true
 
   /swagger2openapi@7.0.8:
