@@ -11,6 +11,7 @@ describe('NoFoundPage component', () => {
         <NoFoundPage />
       </RawIntlProvider>,
     );
+
     expect(container).toMatchSnapshot();
   });
 });
