@@ -21,8 +21,8 @@ dependencies:
     specifier: ^3.6.2
     version: 3.6.2(@types/react@18.3.2)(antd@5.17.0)(react-dom@18.3.1)(react@18.3.1)
   casdoor-js-sdk:
-    specifier: ^0.13.0
-    version: 0.13.0
+    specifier: ^0.14.0
+    version: 0.14.0
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
@@ -5616,7 +5616,7 @@ packages:
     resolution: {integrity: sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==}
     deprecated: This is a stub types definition. history provides its own type definitions, so you do not need this installed.
     dependencies:
-      history: 4.10.1
+      history: 5.3.0
     dev: true
 
   /@types/hoist-non-react-statics@3.3.5:
@@ -5782,7 +5782,7 @@ packages:
       '@types/history': 4.7.11
       '@types/react': 18.3.2
       '@types/react-router': 5.1.20
-      redux: 3.7.2
+      redux: 4.2.1
     dev: true
 
   /@types/react-router@5.1.20:
@@ -8786,8 +8786,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /casdoor-js-sdk@0.13.0:
-    resolution: {integrity: sha512-aawLvNR5+iKhOtdNeyu1cBH9CpUKtrJSFcDZDQOGlf3Rh/PJuEwtunfzfCocahR0BMaq2POcWfbxlBWfGq45QQ==}
+  /casdoor-js-sdk@0.14.0:
+    resolution: {integrity: sha512-L+LEkIglevAEkmt4PreKzRGcMwwF95135PCxyzRiQhvbnH5SBlOW8/woWl4IgzvEfKu9vmmNKGepmXtQ9JFFTw==}
     dependencies:
       js-pkce: 1.4.0
       jwt-decode: 4.0.0
